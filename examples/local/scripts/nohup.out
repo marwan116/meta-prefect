@@ -1,0 +1,156 @@
+Discovered worker type 'process' for work pool 'local-process-work-pool-0ec843cc'.
+Worker 'ProcessWorker -- 00000000-0000-0000-0000-acde48001122 -- 1ca3' started!
+Discovered worker type 'process' for work pool 'local-process-work-pool-0ec843cc'.
+Worker 'ProcessWorker -- 00000000-0000-0000-0000-acde48001122 -- 7271' started!
+Discovered worker type 'process' for work pool 'local-process-work-pool-0ec843cc'.
+Worker 'ProcessWorker -- 00000000-0000-0000-0000-acde48001122 -- ee88' started!
+Discovered worker type 'process' for work pool 'local-process-work-pool-0ec843cc'.
+Worker 'ProcessWorker -- 00000000-0000-0000-0000-acde48001122 -- 90a9' started!
+09:11:38.413 | INFO    | prefect.flow_runs.worker - Worker 'ProcessWorker -- 00000000-0000-0000-0000-acde48001122 -- 90a9' submitting flow run '38df9c7a-a5a0-41bf-b096-c86620d50c35'
+09:11:38.600 | INFO    | prefect.flow_runs.worker - Worker 'ProcessWorker -- 00000000-0000-0000-0000-acde48001122 -- 7271' submitting flow run '38df9c7a-a5a0-41bf-b096-c86620d50c35'
+09:11:38.870 | INFO    | prefect.flow_runs.worker - Aborted submission of flow run '38df9c7a-a5a0-41bf-b096-c86620d50c35'. Server sent an abort signal: This run is in a PENDING state and cannot transition to a PENDING state.
+09:11:38.879 | INFO    | prefect.flow_runs.worker - Opening process...
+09:11:38.951 | INFO    | prefect.flow_runs.worker - Completed submission of flow run '38df9c7a-a5a0-41bf-b096-c86620d50c35'
+/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/runpy.py:127: RuntimeWarning: 'prefect.engine' found in sys.modules after import of package 'prefect', but prior to execution of 'prefect.engine'; this may result in unpredictable behaviour
+  warn(RuntimeWarning(msg))
+09:11:42.999 | INFO    | Flow run 'outrageous-grasshopper' - Downloading flow code from storage at '/Users/marwansarieddine/open_source/marwan/meta-prefect/examples/local/scripts'
+09:11:43.821 | INFO    | Flow run 'outrageous-grasshopper' - Running subtract_two_numbers_flow in env='prod'
+09:11:43.821 | INFO    | Flow run 'outrageous-grasshopper' - out=5
+09:11:43.950 | INFO    | Flow run 'outrageous-grasshopper' - Finished in state Completed()
+09:11:44.333 | INFO    | prefect.flow_runs.worker - Process 96286 exited cleanly.
+Received SIGTERM. Sending SIGINT to the None worker (PID 96186)...
+Received SIGTERM. Sending SIGINT to the None worker (PID 96179)...
+Received SIGTERM. Sending SIGINT to the None worker (PID 96188)...
+Received SIGTERM. Sending SIGINT to the None worker (PID 96181)...
+Received SIGINT. Sending SIGINT to the None worker (PID 96186)...
+Received SIGINT. Sending SIGINT to the None worker (PID 96179)...
+Received SIGINT. Sending SIGINT to the None worker (PID 96188)...
+Received SIGINT. Sending SIGINT to the None worker (PID 96181)...
+Worker 'ProcessWorker -- 00000000-0000-0000-0000-acde48001122 -- ee88' stopped!
+Worker 'ProcessWorker -- 00000000-0000-0000-0000-acde48001122 -- 1ca3' stopped!
+Worker 'ProcessWorker -- 00000000-0000-0000-0000-acde48001122 -- 7271' stopped!
+Worker 'ProcessWorker -- 00000000-0000-0000-0000-acde48001122 -- 90a9' stopped!
+
+
+
+
+Aborted.
+Aborted.
+Aborted.
+Aborted.
+09:35:47.969 | ERROR   | GlobalEventLoopThread | prefect._internal.concurrency - Service 'EventsWorker' failed to process item (Event(occurred=DateTime(2023, 8, 5, 13, 35, 47, 964777, tzinfo=Timezone('UTC')), event='prefect.worker.stopped', resource=Resource(__root__={'prefect.resource.id': 'prefect.worker.process.processworker-00000000-0000-0000-0000-acde48001122-1ca3', 'prefect.resource.name': 'ProcessWorker -- 00000000-0000-0000-0000-acde48001122 -- 1ca3', 'prefect.version': '2.11.2', 'prefect.worker-type': 'process'}), related=[RelatedResource(__root__={'prefect.resource.id': 'prefect.work-pool.e4a97d3c-5a96-4c8a-9837-cc66d54fe4df', 'prefect.resource.role': 'work-pool', 'prefect.resource.name': 'local-process-work-pool-0ec843cc'})], payload={}, id=UUID('8ce9619e-7cdf-456e-ada2-87c90370f652'), follows=None), <Context object at 0x1080a0a40>)
+Traceback (most recent call last):
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/_internal/concurrency/services.py", line 150, in _main_loop
+    await self._handle(item)
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/events/worker.py", line 41, in _handle
+    await self._client.emit(event)
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/events/clients.py", line 22, in emit
+    return await self._emit(event)
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/events/clients.py", line 180, in _emit
+    await self._reconnect()
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/events/clients.py", line 141, in _reconnect
+    self._websocket = await self._connect.__aenter__()
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/websockets/legacy/client.py", line 637, in __aenter__
+    return await self
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/websockets/legacy/client.py", line 655, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/websockets/legacy/client.py", line 659, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/asyncio/base_events.py", line 986, in create_connection
+    infos = await self._ensure_resolved(
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/asyncio/base_events.py", line 1365, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+09:35:47.969 | ERROR   | GlobalEventLoopThread | prefect._internal.concurrency - Service 'EventsWorker' failed to process item (Event(occurred=DateTime(2023, 8, 5, 13, 35, 47, 964740, tzinfo=Timezone('UTC')), event='prefect.worker.stopped', resource=Resource(__root__={'prefect.resource.id': 'prefect.worker.process.processworker-00000000-0000-0000-0000-acde48001122-ee88', 'prefect.resource.name': 'ProcessWorker -- 00000000-0000-0000-0000-acde48001122 -- ee88', 'prefect.version': '2.11.2', 'prefect.worker-type': 'process'}), related=[RelatedResource(__root__={'prefect.resource.id': 'prefect.work-pool.e4a97d3c-5a96-4c8a-9837-cc66d54fe4df', 'prefect.resource.role': 'work-pool', 'prefect.resource.name': 'local-process-work-pool-0ec843cc'})], payload={}, id=UUID('4f25db10-3ace-413e-96f1-7845f0e001c6'), follows=None), <Context object at 0x112f63c00>)
+Traceback (most recent call last):
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/_internal/concurrency/services.py", line 150, in _main_loop
+    await self._handle(item)
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/events/worker.py", line 41, in _handle
+    await self._client.emit(event)
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/events/clients.py", line 22, in emit
+    return await self._emit(event)
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/events/clients.py", line 180, in _emit
+    await self._reconnect()
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/events/clients.py", line 141, in _reconnect
+    self._websocket = await self._connect.__aenter__()
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/websockets/legacy/client.py", line 637, in __aenter__
+    return await self
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/websockets/legacy/client.py", line 655, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/websockets/legacy/client.py", line 659, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/asyncio/base_events.py", line 986, in create_connection
+    infos = await self._ensure_resolved(
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/asyncio/base_events.py", line 1365, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+09:35:47.970 | ERROR   | GlobalEventLoopThread | prefect._internal.concurrency - Service 'EventsWorker' failed to process item (Event(occurred=DateTime(2023, 8, 5, 13, 35, 47, 964901, tzinfo=Timezone('UTC')), event='prefect.worker.stopped', resource=Resource(__root__={'prefect.resource.id': 'prefect.worker.process.processworker-00000000-0000-0000-0000-acde48001122-90a9', 'prefect.resource.name': 'ProcessWorker -- 00000000-0000-0000-0000-acde48001122 -- 90a9', 'prefect.version': '2.11.2', 'prefect.worker-type': 'process'}), related=[RelatedResource(__root__={'prefect.resource.id': 'prefect.work-pool.e4a97d3c-5a96-4c8a-9837-cc66d54fe4df', 'prefect.resource.role': 'work-pool', 'prefect.resource.name': 'local-process-work-pool-0ec843cc'})], payload={}, id=UUID('f99c4d52-dd9e-4cf8-80eb-0da22686ffe6'), follows=None), <Context object at 0x111b51b40>)
+Traceback (most recent call last):
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/_internal/concurrency/services.py", line 150, in _main_loop
+    await self._handle(item)
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/events/worker.py", line 41, in _handle
+    await self._client.emit(event)
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/events/clients.py", line 22, in emit
+    return await self._emit(event)
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/events/clients.py", line 180, in _emit
+    await self._reconnect()
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/events/clients.py", line 141, in _reconnect
+    self._websocket = await self._connect.__aenter__()
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/websockets/legacy/client.py", line 637, in __aenter__
+    return await self
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/websockets/legacy/client.py", line 655, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/websockets/legacy/client.py", line 659, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/asyncio/base_events.py", line 986, in create_connection
+    infos = await self._ensure_resolved(
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/asyncio/base_events.py", line 1365, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+09:35:47.970 | ERROR   | GlobalEventLoopThread | prefect._internal.concurrency - Service 'EventsWorker' failed to process item (Event(occurred=DateTime(2023, 8, 5, 13, 35, 47, 964840, tzinfo=Timezone('UTC')), event='prefect.worker.stopped', resource=Resource(__root__={'prefect.resource.id': 'prefect.worker.process.processworker-00000000-0000-0000-0000-acde48001122-7271', 'prefect.resource.name': 'ProcessWorker -- 00000000-0000-0000-0000-acde48001122 -- 7271', 'prefect.version': '2.11.2', 'prefect.worker-type': 'process'}), related=[RelatedResource(__root__={'prefect.resource.id': 'prefect.work-pool.e4a97d3c-5a96-4c8a-9837-cc66d54fe4df', 'prefect.resource.role': 'work-pool', 'prefect.resource.name': 'local-process-work-pool-0ec843cc'})], payload={}, id=UUID('6a791e37-55ec-483d-a5f6-b3b40f20febe'), follows=None), <Context object at 0x1059847c0>)
+Traceback (most recent call last):
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/_internal/concurrency/services.py", line 150, in _main_loop
+    await self._handle(item)
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/events/worker.py", line 41, in _handle
+    await self._client.emit(event)
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/events/clients.py", line 22, in emit
+    return await self._emit(event)
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/events/clients.py", line 180, in _emit
+    await self._reconnect()
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/prefect/events/clients.py", line 141, in _reconnect
+    self._websocket = await self._connect.__aenter__()
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/websockets/legacy/client.py", line 637, in __aenter__
+    return await self
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/websockets/legacy/client.py", line 655, in __await_impl_timeout__
+    return await self.__await_impl__()
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/envs/meta-prefect-py38/lib/python3.8/site-packages/websockets/legacy/client.py", line 659, in __await_impl__
+    _transport, _protocol = await self._create_connection()
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/asyncio/base_events.py", line 986, in create_connection
+    infos = await self._ensure_resolved(
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/asyncio/base_events.py", line 1365, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/marwansarieddine/.pyenv/versions/3.8.7/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known

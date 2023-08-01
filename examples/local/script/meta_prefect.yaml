@@ -1,0 +1,8 @@
+deployments:
+  add-two-numbers-flow:
+    - recipe: local_run_deployer
+      variables:
+        name: local-run
+        schedule:
+          rrule: "FREQ=DAILY;BYDAY=MO,WE,FR,SA"
+          timezone: "US/Pacific"
